@@ -1,0 +1,324 @@
+.container {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, #2b0f18 0%, #13060c 45%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 77, 109, 0.14), transparent 18%),
+    radial-gradient(circle at 85% 18%, rgba(255, 166, 201, 0.12), transparent 20%),
+    radial-gradient(circle at 50% 85%, rgba(255, 77, 109, 0.1), transparent 24%);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.valentine {
+  font-size: 2.6rem;
+  color: #ff6b8d;
+  margin-bottom: 10px;
+  text-shadow: 0 0 18px rgba(255, 77, 109, 0.25);
+}
+
+.noteTitle {
+  font-size: 1.8rem;
+  color: white;
+  font-family: cursive;
+  margin-bottom: 30px;
+}
+
+.letter {
+  width: 320px;
+  max-width: 90vw;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ff9fc3, #ffd6e5);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 105, 145, 0.15);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.letter:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 28px 50px rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(255, 105, 145, 0.2);
+}
+
+.letterTop {
+  height: 56px;
+  background: #ff85b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+}
+
+.letterBody {
+  padding: 30px;
+}
+
+.bigHeart {
+  font-size: 4rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.tapText {
+  margin-top: 10px;
+  color: #ff2f7a;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.openLetter {
+  background: linear-gradient(180deg, #fff0f6, #ffe6ef);
+  padding: 40px 50px;
+  border-radius: 24px;
+  font-size: 1.25rem;
+  color: #d62d67;
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 125, 160, 0.14);
+  max-width: 760px;
+  line-height: 1.75;
+  position: relative;
+  text-align: center;
+}
+
+.openLetter p {
+  margin: 15px 0;
+}
+
+.topHeart {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 14px;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.finalTitle {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  color: #ff2f7a;
+}
+
+.question {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #c71f5d;
+  margin-top: 20px;
+}
+
+.choiceRow {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 70px;
+}
+
+.yesBtn,
+.noBtn {
+  width: 140px;
+  height: 55px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.yesBtn {
+  background: linear-gradient(135deg, #ff5f7e, #ff85a1);
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 95, 126, 0.3);
+}
+
+.yesBtn:hover {
+  transform: scale(1.06);
+}
+
+.noBtn {
+  background: #ffd6de;
+  color: #ff4d6d;
+  box-shadow: 0 8px 18px rgba(255, 77, 109, 0.18);
+}
+
+.acceptedBox {
+  text-align: center;
+  animation: fadeInUp 0.7s ease;
+}
+
+.successHeart {
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.acceptedBox h2 {
+  margin-bottom: 14px;
+  color: #ff2f7a;
+  font-size: 2rem;
+}
+
+.signature {
+  margin-top: 22px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #c71f5d;
+}
+
+.floatingHeart {
+  position: absolute;
+  top: -10%;
+  animation-name: floatDown;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.25));
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50vh) translateX(12px) scale(1.05);
+  }
+  100% {
+    transform: translateY(115vh) translateX(-12px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .valentine {
+    font-size: 2rem;
+  }
+
+  .noteTitle {
+    font-size: 1.35rem;
+    margin-bottom: 24px;
+  }
+
+  .letter {
+    width: 290px;
+  }
+
+  .openLetter {
+    padding: 28px 22px;
+    font-size: 1.02rem;
+  }
+
+  .finalTitle {
+    font-size: 1.6rem;
+  }
+
+  .question {
+    font-size: 1.15rem;
+  }
+
+  .topHeart {
+    font-size: 2.3rem;
+  }
+
+  .choiceRow {
+    gap: 16px;
+  }
+
+  .yesBtn,
+  .noBtn {
+    width: 130px;
+    height: 50px;
+    font-size: 0.98rem;
+  }
+
+  .acceptedBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .signature {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+  }
+
+  .valentine {
+    font-size: 1.7rem;
+  }
+
+  .noteTitle {
+    font-size: 1.1rem;
+  }
+
+  .letterBody {
+    padding: 24px;
+  }
+
+  .bigHeart {
+    font-size: 3.2rem;
+  }
+
+  .tapText {
+    font-size: 0.95rem;
+  }
+
+  .openLetter {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+}

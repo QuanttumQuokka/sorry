@@ -1,0 +1,355 @@
+.container{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background-image:url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+    background-size:cover;
+
+    overflow:hidden;
+    position:relative;
+
+}
+
+.paper{
+
+    width:520px;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+    animation:popup 1s;
+
+}
+
+.paper h1{
+
+    font-size:55px;
+
+    color:#ff3d74;
+
+}
+
+.paper h2{
+
+    margin-top:20px;
+
+    color:#444;
+
+    font-size:35px;
+
+}
+
+.paper p{
+
+    margin:20px 0;
+
+    font-size:25px;
+
+}
+
+.paper input{
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    border:2px solid pink;
+
+    font-size:28px;
+
+    text-align:center;
+
+    outline:none;
+
+}
+
+.paper button{
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    background:#ff4f7b;
+
+    color:white;
+
+    font-size:28px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.paper button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.paper h3{
+
+    margin-top:20px;
+
+    color:#ff3d74;
+
+    font-size:28px;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:scale(.5);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+.heart,
+.heart2,
+.heart3,
+.heart4{
+
+position:absolute;
+
+font-size:60px;
+
+animation:fly 3s linear infinite;
+
+}
+
+.heart{
+
+left:20%;
+
+bottom:-100px;
+
+}
+
+.heart2{
+
+left:40%;
+
+bottom:-120px;
+
+animation-delay:.5s;
+
+}
+
+.heart3{
+
+left:60%;
+
+bottom:-150px;
+
+animation-delay:1s;
+
+}
+
+.heart4{
+
+left:80%;
+
+bottom:-100px;
+
+animation-delay:1.5s;
+
+}
+
+@keyframes fly{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.5);
+
+opacity:0;
+
+}
+
+}
+/* 
+.container{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.card{
+
+width:550px;
+
+padding:60px;
+
+background:white;
+
+border-radius:30px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+text-align:center;
+
+animation:popup .8s ease;
+
+}
+
+.card h1{
+
+font-family:Pacifico;
+
+font-size:55px;
+
+color:#ff4d79;
+
+margin-bottom:25px;
+
+}
+
+.card h2{
+
+font-size:36px;
+
+color:#444;
+
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:22px;
+
+margin-bottom:35px;
+
+color:#666;
+
+}
+
+.card input{
+
+width:100%;
+
+padding:18px;
+
+border-radius:15px;
+
+border:2px solid #ffb6c7;
+
+font-size:28px;
+
+text-align:center;
+
+outline:none;
+
+margin-bottom:25px;
+
+}
+
+.card input:focus{
+
+border-color:#ff4d79;
+
+}
+
+.card button{
+
+padding:18px 45px;
+
+border:none;
+
+background:#ff4d79;
+
+color:white;
+
+font-size:28px;
+
+border-radius:15px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card button:hover{
+
+transform:scale(1.05);
+
+}
+
+.card h3{
+
+margin-top:25px;
+
+color:#ff4d79;
+
+font-size:24px;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:translateY(60px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+} */
